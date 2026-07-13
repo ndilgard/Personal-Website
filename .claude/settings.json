@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/nate/Claude_Code/Projects/Website/.claude/hooks/guard-deploy.sh",
+            "statusMessage": "Checking for deploy commands..."
+          }
+        ]
+      }
+    ]
+  }
+}
