@@ -9,8 +9,7 @@
 
 :root {
   --purple:  #2ab8d4;  /* bright teal — primary accent */
-  --pink:    #748D92;  /* muted slate    — secondary accent */
-  --orange:  #748D92;  /* muted slate    — same as pink */
+  --wine:    #6B2C39;  /* deep muted wine — secondary accent */
   --yellow:  #D3D9D4;  /* light gray-green — highlight */
   --dark:    #212A31;  /* very dark blue-gray — backgrounds & text */
   --mid:     #2E3944;  /* dark blue-gray  — gradient midpoints */
@@ -110,7 +109,7 @@ nav {
 .nav-logo {
   font-size: 1.4rem;
   font-weight: 800;
-  background: linear-gradient(90deg, var(--pink), var(--orange));
+  background: linear-gradient(90deg, var(--wine), var(--wine));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -174,7 +173,7 @@ nav {
   width: 400px;
   height: 400px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(116,141,146,0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(107,44,57,0.2) 0%, transparent 70%);
   bottom: -50px;
   left: -50px;
 }
@@ -202,7 +201,7 @@ nav {
 }
 
 .hero-name span {
-  background: linear-gradient(90deg, var(--pink), var(--orange), var(--yellow));
+  background: linear-gradient(90deg, var(--wine), var(--wine), var(--yellow));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -239,7 +238,7 @@ nav {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--pink), var(--orange));
+  background: linear-gradient(135deg, var(--wine), var(--wine));
   color: var(--white);
   border: none;
 }
@@ -278,7 +277,7 @@ section {
 }
 
 .section-title span {
-  background: linear-gradient(90deg, var(--purple), var(--pink));
+  background: linear-gradient(90deg, var(--purple), var(--wine));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -325,13 +324,13 @@ section {
   position: absolute;
   bottom: -1rem;
   right: -1rem;
-  background: var(--orange);
+  background: var(--wine);
   color: var(--white);
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   font-weight: 800;
   font-size: 0.9rem;
-  box-shadow: 0 4px 15px rgba(116,141,146,0.4);
+  box-shadow: 0 4px 15px rgba(107,44,57,0.4);
 }
 
 .about-text h3 {
@@ -394,8 +393,8 @@ section {
 }
 
 .skill-card:nth-child(1) { border-top-color: var(--purple); }
-.skill-card:nth-child(2) { border-top-color: var(--pink); }
-.skill-card:nth-child(3) { border-top-color: var(--orange); }
+.skill-card:nth-child(2) { border-top-color: var(--wine); }
+.skill-card:nth-child(3) { border-top-color: var(--wine); }
 .skill-card:nth-child(4) { border-top-color: var(--yellow); }
 
 .skill-card:hover {
@@ -426,7 +425,7 @@ section {
 }
 
 #projects .section-label {
-  color: var(--pink);
+  color: var(--wine);
 }
 
 #projects .section-title {
@@ -455,7 +454,7 @@ section {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--pink);
+  color: var(--wine);
   margin: 2.5rem 0 1rem;
   padding-bottom: 0.4rem;
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -608,7 +607,7 @@ section {
 }
 
 .form-status--success { color: #2ab8d4; }
-.form-status--error   { color: #748D92; }
+.form-status--error   { color: #A8505F; }
 
 .social-link:hover {
   transform: translateY(-2px);
@@ -866,8 +865,8 @@ section {
 }
 
 .volunteer-dot--active {
-  background: var(--pink);
-  box-shadow: 0 0 0 2px var(--pink);
+  background: var(--wine);
+  box-shadow: 0 0 0 2px var(--wine);
 }
 
 .volunteer-card {
@@ -995,7 +994,7 @@ footer {
 .footer-brand {
   font-size: 1.3rem;
   font-weight: 800;
-  background: linear-gradient(90deg, var(--purple), var(--pink));
+  background: linear-gradient(90deg, var(--purple), var(--wine));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
