@@ -95,6 +95,36 @@
           </div>
         </div>
 
+        <div class="project-card">
+          <div class="project-emoji">👁️</div>
+          <h3>HIDS — Host Intrusion Detection System</h3>
+          <p>
+            Built a lightweight Host Intrusion Detection System for a personal Linux machine, from
+            scratch — four independent monitoring modules plus real-time alerting, running as a
+            persistent systemd service with a local web dashboard.
+          </p>
+          <ul>
+            <li><strong>File integrity:</strong> real-time inotify watches plus periodic
+              reconciliation; also hashes every binary that's earned network-level trust, so
+              tampering after the fact still gets caught</li>
+            <li><strong>Process monitoring:</strong> flags binaries running from suspicious paths
+              or deleted from disk</li>
+            <li><strong>Auth logs:</strong> streams journalctl for failed logins and sudo attempts</li>
+            <li><strong>Network activity:</strong> new listening ports and outbound connections,
+              tracked per-process and per-destination-subnet — closes the "trust forever" gap for a
+              compromised-but-familiar process without CDN edge-IP rotation causing noise</li>
+            <li>Real-time, debounced email alerting</li>
+          </ul>
+          <div>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Bun</span>
+            <span class="project-tag">Linux</span>
+            <span class="project-tag">systemd</span>
+            <span class="project-tag">Security Monitoring</span>
+            <span class="project-tag">Cybersecurity</span>
+          </div>
+        </div>
+
       </div>
 
       <h3 class="projects-category">Morgan Stanley</h3>
