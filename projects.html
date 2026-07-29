@@ -100,8 +100,9 @@
           <h3>HIDS — Host Intrusion Detection System</h3>
           <p>
             Built a lightweight Host Intrusion Detection System for a personal Linux machine, from
-            scratch — four independent monitoring modules plus real-time alerting, running as a
-            persistent systemd service with a local web dashboard.
+            scratch — five independent monitoring modules plus real-time alerting, running as two
+            independent systemd services (detection daemon + dashboard) so a crashed daemon can't
+            take the dashboard down with it.
           </p>
           <ul>
             <li><strong>File integrity:</strong> real-time inotify watches plus periodic
@@ -113,7 +114,10 @@
             <li><strong>Network activity:</strong> new listening ports and outbound connections,
               tracked per-process and per-destination-subnet — closes the "trust forever" gap for a
               compromised-but-familiar process without CDN edge-IP rotation causing noise</li>
-            <li>Real-time, debounced email alerting</li>
+            <li><strong>Self-protection:</strong> pings an external dead-man's-switch every 2
+              minutes, since nothing running only on the host can reliably report its own death</li>
+            <li>Real-time, debounced email alerting; dashboard shows a live/stale banner derived
+              independently of the daemon it's monitoring</li>
           </ul>
           <div>
             <span class="project-tag">TypeScript</span>
