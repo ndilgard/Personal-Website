@@ -78,23 +78,98 @@
           </div>
         </div>
 
+        <div class="project-card">
+          <div class="project-emoji">🤖</div>
+          <h3>Personal AI Assistant</h3>
+          <p>
+            Built a personal AI automation framework on top of Claude Code — a persistent assistant
+            with structured memory, custom commands, and scheduled automations. Integrates with email,
+            financial data, and web scraping tools via MCP to handle recurring tasks like automated job
+            search digests, all orchestrated through natural language and a file-based architecture.
+          </p>
+          <div>
+            <span class="project-tag">Claude Code</span>
+            <span class="project-tag">AI Agents</span>
+            <span class="project-tag">Automation</span>
+            <span class="project-tag">TypeScript</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-emoji">👁️</div>
+          <h3>HIDS — Host Intrusion Detection System</h3>
+          <p>
+            Built a lightweight Host Intrusion Detection System for a personal Linux machine, from
+            scratch — five independent monitoring modules plus real-time alerting, running as two
+            independent systemd services (detection daemon + dashboard) so a crashed daemon can't
+            take the dashboard down with it.
+          </p>
+          <ul>
+            <li><strong>File integrity:</strong> real-time inotify watches plus periodic
+              reconciliation; also hashes every binary that's earned network-level trust, so
+              tampering after the fact still gets caught</li>
+            <li><strong>Process monitoring:</strong> flags binaries running from suspicious paths
+              or deleted from disk</li>
+            <li><strong>Auth logs:</strong> streams journalctl for failed logins and sudo attempts</li>
+            <li><strong>Network activity:</strong> new listening ports and outbound connections,
+              tracked per-process and per-destination-subnet — closes the "trust forever" gap for a
+              compromised-but-familiar process without CDN edge-IP rotation causing noise</li>
+            <li><strong>Self-protection:</strong> pings an external dead-man's-switch every 2
+              minutes, since nothing running only on the host can reliably report its own death</li>
+            <li>Real-time, debounced email alerting; dashboard shows a live/stale banner derived
+              independently of the daemon it's monitoring</li>
+          </ul>
+          <div>
+            <span class="project-tag">TypeScript</span>
+            <span class="project-tag">Bun</span>
+            <span class="project-tag">Linux</span>
+            <span class="project-tag">systemd</span>
+            <span class="project-tag">Security Monitoring</span>
+            <span class="project-tag">Cybersecurity</span>
+          </div>
+        </div>
+
       </div>
 
       <h3 class="projects-category">Morgan Stanley</h3>
       <div class="projects-grid">
 
         <div class="project-card">
+          <div class="project-emoji">🔍</div>
+          <h3>OSS CVE Research Agent</h3>
+          <p>
+            Built a Copilot-based agent that automates CVE vulnerability research and triage for
+            open-source dependencies. It cross-references authoritative public sources — NVD, MITRE,
+            GitHub Security Advisories, vendor advisories — to trace direct and transitive dependency
+            chains, then classifies each CVE into one of three evidence-backed verdicts (Affected, Not
+            Affected, Potentially Affected) rather than trusting scanner output blindly. Generates an
+            audit-ready report per CVE with justification, dependency path, and cited evidence for
+            every conclusion, explicitly supporting false-positive analysis when a vulnerable version,
+            dependency, or code path isn't actually present.
+          </p>
+          <div>
+            <span class="project-tag">AI Agents</span>
+            <span class="project-tag">Copilot</span>
+            <span class="project-tag">Vulnerability Management</span>
+            <span class="project-tag">CVE Research</span>
+            <span class="project-tag">Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="project-card">
           <div class="project-emoji">🔄</div>
           <h3>Nexpose to Qualys Migration</h3>
           <p>
             Led the enterprise-wide migration from Rapid7 Nexpose to Qualys for vulnerability
-            scanning. Managed the transition of scan coverage, policies, and reporting across
-            the entire Morgan Stanley environment with minimal disruption.
+            scanning. Designed the logical layout of scanners, networks, and subnets across the
+            datacenters, and managed the transition of scan coverage, policies, and reporting
+            across the entire Morgan Stanley environment with minimal disruption.
           </p>
           <div>
             <span class="project-tag">Vulnerability Management</span>
             <span class="project-tag">Qualys</span>
             <span class="project-tag">Rapid7</span>
+            <span class="project-tag">Network Design</span>
           </div>
         </div>
 
