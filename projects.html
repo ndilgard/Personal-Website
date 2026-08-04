@@ -122,6 +122,13 @@
               judgment to every new finding — reverse-DNS/ASN lookups on network events, always-escalate
               rules for auth and file-tamper alerts — so routine noise stays silent and only genuinely
               alarming findings ever reach an inbox</li>
+            <li><strong>Alert whitelisting:</strong> dashboard-managed rules suppress known-noisy
+              findings by module/field/value; nothing's silently dropped though — a filterable
+              "Suppressed Events" audit view keeps every suppressed finding visible, with one click
+              to reverse a bad rule</li>
+            <li><strong>Remote triage:</strong> alert emails carry a dashboard link plus a signed,
+              single-use "whitelist this" link per finding — reachable from any device on the home
+              network, so noise gets handled without needing to be at the machine</li>
           </ul>
           <div>
             <span class="project-tag">TypeScript</span>
