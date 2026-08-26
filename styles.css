@@ -496,7 +496,7 @@ section {
 }
 
 .project-card ul {
-  margin: -0.5rem 0 1.25rem 1.1rem;
+  margin: 0 0 0 1.1rem;
   padding: 0;
   color: rgba(255,255,255,0.6);
   font-size: 0.9rem;
@@ -509,6 +509,56 @@ section {
 
 .project-card ul strong {
   color: rgba(255,255,255,0.85);
+}
+
+.project-details {
+  margin-bottom: 1.25rem;
+}
+
+.project-details summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+  color: var(--purple);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.project-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-details summary::marker {
+  content: "";
+}
+
+.project-details summary:hover {
+  color: #4fd2ec;
+}
+
+.project-details .chevron {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.75rem;
+}
+
+.project-details[open] .chevron {
+  transform: rotate(90deg);
+}
+
+.project-details[open] summary {
+  margin-bottom: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-details .chevron {
+    transition: none;
+  }
 }
 
 .project-tag {
