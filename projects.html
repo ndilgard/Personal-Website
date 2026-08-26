@@ -43,50 +43,22 @@
       <div class="projects-grid">
 
         <div class="project-card">
-          <div class="project-emoji">🛡️</div>
-          <h3>CISSP Exam Simulator</h3>
-          <p>
-            Built a full-featured CISSP exam simulator to prepare for one of the most challenging
-            certifications in cybersecurity. Features two modes — a Computerized Adaptive Testing
-            (CAT) exam that adjusts difficulty based on performance, and a practice mode for
-            studying by domain. Includes an AI-generated question bank spanning all 8 CISSP domains
-            across three difficulty levels.
-          </p>
-          <div>
-            <span class="project-tag">React</span>
-            <span class="project-tag">Vite</span>
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">CISSP</span>
-            <span class="project-tag">Cybersecurity</span>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-emoji">🌐</div>
-          <h3>Personal Website</h3>
-          <p>
-            Designed and built this portfolio site from scratch using plain HTML and CSS — no frameworks.
-            Features a multi-page layout, custom Cosmic Artistry color scheme, responsive design,
-            scroll animations, and an experience timeline. Planned for deployment on AWS using S3,
-            CloudFront, and Route 53.
-          </p>
-          <div>
-            <span class="project-tag">HTML</span>
-            <span class="project-tag">CSS</span>
-            <span class="project-tag">JavaScript</span>
-            <span class="project-tag">AWS</span>
-          </div>
-        </div>
-
-        <div class="project-card">
           <div class="project-emoji">🤖</div>
           <h3>Personal AI Assistant</h3>
           <p>
             Built a personal AI automation framework on top of Claude Code — a persistent assistant
-            with structured memory, custom commands, and scheduled automations. Integrates with email,
-            financial data, and web scraping tools via MCP to handle recurring tasks like automated job
-            search digests, all orchestrated through natural language and a file-based architecture.
+            orchestrated through natural language and a file-based architecture.
           </p>
+          <details class="project-details">
+            <summary><span class="chevron">›</span> Details</summary>
+            <ul>
+              <li><strong>Structured memory:</strong> persists context and preferences across
+                sessions instead of starting from zero each time</li>
+              <li><strong>Custom commands & scheduled automations:</strong> recurring tasks, like a
+                daily job-search digest, run unattended</li>
+              <li><strong>Integrations:</strong> email, financial data, and web scraping via MCP</li>
+            </ul>
+          </details>
           <div>
             <span class="project-tag">Claude Code</span>
             <span class="project-tag">AI Agents</span>
@@ -104,31 +76,94 @@
             independent systemd services (detection daemon + dashboard) so a crashed daemon can't
             take the dashboard down with it.
           </p>
-          <ul>
-            <li><strong>File integrity:</strong> real-time inotify watches plus periodic
-              reconciliation; also hashes every binary that's earned network-level trust, so
-              tampering after the fact still gets caught</li>
-            <li><strong>Process monitoring:</strong> flags binaries running from suspicious paths
-              or deleted from disk</li>
-            <li><strong>Auth logs:</strong> streams journalctl for failed logins and sudo attempts</li>
-            <li><strong>Network activity:</strong> new listening ports and outbound connections,
-              tracked per-process and per-destination-subnet — closes the "trust forever" gap for a
-              compromised-but-familiar process without CDN edge-IP rotation causing noise</li>
-            <li><strong>Self-protection:</strong> pings an external dead-man's-switch every 2
-              minutes, since nothing running only on the host can reliably report its own death</li>
-            <li>Real-time, debounced email alerting; dashboard shows a live/stale banner derived
-              independently of the daemon it's monitoring</li>
-            <li><strong>Alert triage:</strong> a scheduled review pass applies real investigative
-              judgment to every new finding — reverse-DNS/ASN lookups on network events, always-escalate
-              rules for auth and file-tamper alerts — so routine noise stays silent and only genuinely
-              alarming findings ever reach an inbox</li>
-          </ul>
+          <details class="project-details">
+            <summary><span class="chevron">›</span> Details</summary>
+            <ul>
+              <li><strong>File integrity:</strong> real-time inotify watches plus periodic
+                reconciliation; also hashes every binary that's earned network-level trust, so
+                tampering after the fact still gets caught</li>
+              <li><strong>Process monitoring:</strong> flags binaries running from suspicious paths
+                or deleted from disk</li>
+              <li><strong>Auth logs:</strong> streams journalctl for failed logins and sudo
+                attempts</li>
+              <li><strong>Network activity:</strong> new listening ports and outbound connections,
+                tracked per-process and per-destination-subnet — closes the "trust forever" gap for
+                a compromised-but-familiar process without CDN edge-IP rotation causing noise</li>
+              <li><strong>Self-protection:</strong> pings an external dead-man's-switch every 2
+                minutes, since nothing running only on the host can reliably report its own
+                death</li>
+              <li>Real-time, debounced email alerting; dashboard shows a live/stale banner derived
+                independently of the daemon it's monitoring</li>
+              <li><strong>Alert triage:</strong> a scheduled review pass applies real investigative
+                judgment to every new finding — reverse-DNS/ASN lookups on network events,
+                always-escalate rules for auth and file-tamper alerts — so routine noise stays
+                silent and only genuinely alarming findings ever reach an inbox</li>
+              <li><strong>Alert whitelisting:</strong> dashboard-managed rules suppress known-noisy
+                findings by module/field/value; nothing's silently dropped though — a filterable
+                "Suppressed Events" audit view keeps every suppressed finding visible, with one
+                click to reverse a bad rule</li>
+              <li><strong>Remote triage:</strong> alert emails carry a dashboard link plus a
+                signed, single-use "whitelist this" link per finding — reachable from any device on
+                the home network, so noise gets handled without needing to be at the machine</li>
+            </ul>
+          </details>
           <div>
             <span class="project-tag">TypeScript</span>
             <span class="project-tag">Bun</span>
             <span class="project-tag">Linux</span>
             <span class="project-tag">systemd</span>
             <span class="project-tag">Security Monitoring</span>
+            <span class="project-tag">Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-emoji">🌐</div>
+          <h3>Personal Website</h3>
+          <p>
+            Designed and built this portfolio site from scratch using plain HTML and CSS — no
+            frameworks.
+          </p>
+          <details class="project-details">
+            <summary><span class="chevron">›</span> Details</summary>
+            <ul>
+              <li><strong>Design:</strong> custom "Cosmic Artistry" color scheme, multi-page
+                layout, responsive across devices</li>
+              <li><strong>Interactivity:</strong> scroll animations and an experience timeline</li>
+              <li><strong>Deployment:</strong> planned for AWS (S3, CloudFront, Route 53)</li>
+            </ul>
+          </details>
+          <div>
+            <span class="project-tag">HTML</span>
+            <span class="project-tag">CSS</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">AWS</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-emoji">🛡️</div>
+          <h3>CISSP Exam Simulator</h3>
+          <p>
+            Built a full-featured CISSP exam simulator to prepare for one of the most challenging
+            certifications in cybersecurity.
+          </p>
+          <details class="project-details">
+            <summary><span class="chevron">›</span> Details</summary>
+            <ul>
+              <li><strong>CAT exam mode:</strong> Computerized Adaptive Testing that adjusts
+                question difficulty in real time based on performance, mirroring the real exam
+                format</li>
+              <li><strong>Practice mode:</strong> study by domain instead of a full timed run</li>
+              <li><strong>Question bank:</strong> AI-generated questions spanning all 8 CISSP
+                domains across three difficulty levels</li>
+            </ul>
+          </details>
+          <div>
+            <span class="project-tag">React</span>
+            <span class="project-tag">Vite</span>
+            <span class="project-tag">JavaScript</span>
+            <span class="project-tag">CISSP</span>
             <span class="project-tag">Cybersecurity</span>
           </div>
         </div>
@@ -143,14 +178,21 @@
           <h3>OSS CVE Research Agent</h3>
           <p>
             Built a Copilot-based agent that automates CVE vulnerability research and triage for
-            open-source dependencies. It cross-references authoritative public sources — NVD, MITRE,
-            GitHub Security Advisories, vendor advisories — to trace direct and transitive dependency
-            chains, then classifies each CVE into one of three evidence-backed verdicts (Affected, Not
-            Affected, Potentially Affected) rather than trusting scanner output blindly. Generates an
-            audit-ready report per CVE with justification, dependency path, and cited evidence for
-            every conclusion, explicitly supporting false-positive analysis when a vulnerable version,
-            dependency, or code path isn't actually present.
+            open-source dependencies, rather than trusting scanner output blindly.
           </p>
+          <details class="project-details">
+            <summary><span class="chevron">›</span> Details</summary>
+            <ul>
+              <li><strong>Sourcing:</strong> cross-references NVD, MITRE, GitHub Security
+                Advisories, and vendor advisories</li>
+              <li><strong>Dependency tracing:</strong> traces direct and transitive dependency
+                chains to confirm a vulnerable path actually exists</li>
+              <li><strong>Verdicts:</strong> classifies each CVE as Affected, Not Affected, or
+                Potentially Affected, with explicit support for false-positive analysis</li>
+              <li><strong>Reporting:</strong> generates an audit-ready report per CVE with
+                justification, dependency path, and cited evidence for every conclusion</li>
+            </ul>
+          </details>
           <div>
             <span class="project-tag">AI Agents</span>
             <span class="project-tag">Copilot</span>
